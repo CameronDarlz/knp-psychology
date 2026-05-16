@@ -1,12 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const PROGRAMME_LABELS: Record<string, string> = {
+  "goalkeeper-edge": "Goalkeeper Edge Program",
+};
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const programme = params.get("programme");
+    if (programme && messageRef.current && !messageRef.current.value) {
+      const label = PROGRAMME_LABELS[programme] ?? programme;
+      messageRef.current.value = `Hi, I'm interested in registering for the ${label}. Please send me more details about the next cohort.`;
+    }
+  }, []);
 
   function validate(data: FormData) {
     const errs: Record<string, string> = {};
@@ -107,6 +121,7 @@ export default function ContactForm() {
           Message <span className="text-[#e8a020]">*</span>
         </label>
         <textarea
+          ref={messageRef}
           id="message"
           name="message"
           rows={5}

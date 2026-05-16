@@ -300,6 +300,209 @@ export default function GoalkeeperPsychologyPage() {
         </div>
       </section>
 
+      {/* ── Goalkeeper Edge Program ── */}
+      <section
+        className="relative overflow-hidden py-24 lg:py-32"
+        aria-labelledby="edge-program-heading"
+        style={{
+          background:
+            "linear-gradient(160deg, #0c0b07 0%, #110e02 40%, #0d0c08 70%, #0a0a0f 100%)",
+        }}
+      >
+        {/* Ambient glow layers */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at 70% 30%, rgba(232,160,32,0.1) 0%, transparent 55%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at 20% 80%, rgba(232,160,32,0.06) 0%, transparent 50%)",
+          }}
+        />
+        {/* Grain */}
+        <div className="grain absolute inset-0 pointer-events-none" aria-hidden="true" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollReveal>
+            {/* Card */}
+            <div
+              className="rounded-sm p-8 lg:p-14 relative overflow-hidden"
+              style={{
+                border: "1px solid rgba(232,160,32,0.45)",
+                boxShadow:
+                  "0 0 0 1px rgba(232,160,32,0.08), 0 0 80px rgba(232,160,32,0.12), inset 0 0 80px rgba(232,160,32,0.04)",
+                background:
+                  "linear-gradient(160deg, rgba(22,18,4,0.98) 0%, rgba(16,14,2,0.98) 100%)",
+              }}
+            >
+              {/* Inner corner glow */}
+              <div
+                className="absolute top-0 right-0 w-64 h-64 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at top right, rgba(232,160,32,0.12) 0%, transparent 65%)",
+                }}
+              />
+
+              {/* Badge */}
+              <div className="flex items-start justify-between flex-wrap gap-4 mb-10">
+                <span
+                  className="inline-flex items-center gap-2 px-4 py-1.5 text-[#0a0a0f] text-xs font-bold uppercase tracking-[0.2em] rounded-sm"
+                  style={{ background: "#e8a020" }}
+                >
+                  <span
+                    className="w-1.5 h-1.5 rounded-full bg-[#0a0a0f] animate-pulse"
+                    aria-hidden="true"
+                  />
+                  Cohort Now Open
+                </span>
+                <span className="text-[#e8a020]/50 text-xs font-semibold uppercase tracking-[0.2em]">
+                  Group Programme
+                </span>
+              </div>
+
+              {/* Headline */}
+              <h2
+                id="edge-program-heading"
+                className="font-[family-name:var(--font-bebas)] text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-[#f0ede8] tracking-wide uppercase leading-none mb-4"
+              >
+                The Goalkeeper
+                <br />
+                <span className="text-[#e8a020]">Edge Program</span>
+              </h2>
+              <p className="text-[#f0ede8]/70 text-lg lg:text-xl max-w-2xl leading-relaxed mb-10">
+                A live, group psychology programme built exclusively for goalkeepers who are serious
+                about their mental game.
+              </p>
+
+              {/* Divider */}
+              <div className="w-16 h-px bg-[#e8a020]/40 mb-10" />
+
+              {/* Body copy */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <div>
+                  <p className="text-[#9a9590] text-base leading-relaxed mb-4">
+                    Most goalkeepers train their body and their technique — but leave the mental
+                    side to chance. The Goalkeeper Edge Program changes that.
+                  </p>
+                  <p className="text-[#9a9590] text-base leading-relaxed">
+                    This is a live, cohort-based group programme where you&rsquo;ll train your
+                    mindset alongside a small group of goalkeepers who share the same drive to
+                    improve. Led by Keval Patel, each session tackles a specific mental challenge
+                    facing goalkeepers — from bouncing back after mistakes, to managing pre-match
+                    nerves, to building the kind of unshakeable confidence that holds over a full
+                    season.
+                  </p>
+                </div>
+
+                {/* Features */}
+                <ul className="flex flex-col gap-4" role="list" aria-label="What's included">
+                  {[
+                    "Live group sessions led by Keval Patel",
+                    "A structured mental skills curriculum built for goalkeepers",
+                    "Peer learning alongside driven, like-minded goalkeepers",
+                    "Practical tools you can apply immediately in training and matches",
+                    "Access to session recordings and resources",
+                    "A community of goalkeepers committed to the mental edge",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-4">
+                      <span
+                        className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full border border-[#e8a020]/60 flex items-center justify-center"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          width="10"
+                          height="8"
+                          viewBox="0 0 10 8"
+                          fill="none"
+                        >
+                          <path
+                            d="M1 4l2.5 2.5L9 1"
+                            stroke="#e8a020"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span className="text-[#f0ede8]/80 text-sm leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Who it's for */}
+              <div className="mb-10">
+                <p className="text-[#9a9590] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                  Who it&rsquo;s for
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "Academy & non-league goalkeepers",
+                    "Semi-professional goalkeepers",
+                    "Goalkeepers aged 16+",
+                  ].map((label) => (
+                    <span
+                      key={label}
+                      className="px-4 py-2 text-sm font-medium text-[#e8a020] rounded-sm"
+                      style={{
+                        border: "1px solid rgba(232,160,32,0.3)",
+                        background: "rgba(232,160,32,0.06)",
+                      }}
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Pricing note */}
+              <p className="text-[#9a9590]/70 text-sm italic mb-10">
+                Pricing for the next cohort will be announced soon. Spaces are limited.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="/contact?programme=goalkeeper-edge"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#e8a020] text-[#0a0a0f] font-bold tracking-wide hover:bg-[#c8881a] transition-colors duration-200 rounded-sm text-sm uppercase"
+                >
+                  Register Your Interest
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#options"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-[#e8a020]/40 text-[#e8a020] font-semibold tracking-wide hover:border-[#e8a020] hover:bg-[#e8a020]/5 transition-all duration-200 rounded-sm text-sm uppercase"
+                >
+                  Learn More About Sessions
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <hr className="divider max-w-7xl mx-auto px-6 lg:px-8" />
 
       {/* ── Section 04 — Support Frequency ── */}
@@ -334,6 +537,7 @@ export default function GoalkeeperPsychologyPage() {
 
       {/* ── Section 05 — Support Options ── */}
       <section
+        id="options"
         className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32"
         aria-labelledby="options-heading"
       >
@@ -363,14 +567,14 @@ export default function GoalkeeperPsychologyPage() {
         </div>
       </section>
 
-      {/* ── Section 06 — Testimonials ── */}
+      {/* ── Section 07 — Testimonials ── */}
       <section
         className="bg-[#080810] border-y border-white/8 py-24 lg:py-32"
         aria-labelledby="testimonials-heading"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
-            <SectionNumber number="06" label="Testimonials" />
+            <SectionNumber number="07" label="Testimonials" />
             <h2
               id="testimonials-heading"
               className="font-[family-name:var(--font-bebas)] text-5xl lg:text-6xl text-[#f0ede8] tracking-wide uppercase leading-tight mb-16"
